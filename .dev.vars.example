@@ -1,0 +1,5 @@
+# Local-only development configuration. Never add a LINE bot credential here.
+LIFF_ID=""
+LINE_LOGIN_CHANNEL_ID=""
+SUBMISSION_ENABLED="false"
+N8N_WEBHOOK_URL="https://wisit.app.n8n.cloud/webhook/hello2-liff-address-submit"

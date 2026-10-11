@@ -1,0 +1,1147 @@
+{
+  "id": "9II6K2Mq6h53Zdu9",
+  "name": "Hello 2 — LINE LIFF Address",
+  "active": false,
+  "isArchived": false,
+  "versionId": "c2f3146a-45c9-44ed-9c5f-52246387c0d2",
+  "activeVersionId": null,
+  "triggerCount": 0,
+  "nodeCount": 29,
+  "createdAt": "2026-10-11T09:06:44.370Z",
+  "updatedAt": "2026-10-11T09:40:43.408Z",
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": true
+  },
+  "tags": [],
+  "parentFolderId": null,
+  "description": "LINE LIFF address submit API with server-side LINE verification. Disabled until channel configured.",
+  "scopes": [
+    "execution:delete",
+    "execution:list",
+    "execution:read",
+    "execution:reveal",
+    "workflow:create",
+    "workflow:delete",
+    "workflow:disableRedaction",
+    "workflow:enableRedaction",
+    "workflow:execute",
+    "workflow:execute-chat",
+    "workflow:export",
+    "workflow:import",
+    "workflow:list",
+    "workflow:move",
+    "workflow:publish",
+    "workflow:read",
+    "workflow:share",
+    "workflow:unpublish",
+    "workflow:unshare",
+    "workflow:update"
+  ],
+  "canExecute": true,
+  "connections": {
+    "LIFF Address Submit": {
+      "main": [
+        [
+          {
+            "node": "Prepare LIFF Submission",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare LIFF Submission": {
+      "main": [
+        [
+          {
+            "node": "LINE Login Configured?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Verify LINE ID Token": {
+      "main": [
+        [
+          {
+            "node": "Check LINE Identity",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check LINE Identity": {
+      "main": [
+        [
+          {
+            "node": "LINE Identity Valid?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lookup Address Token": {
+      "main": [
+        [
+          {
+            "node": "Validate Address",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validate Address": {
+      "main": [
+        [
+          {
+            "node": "Accepted?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Load Authoritative Geography": {
+      "main": [
+        [
+          {
+            "node": "Check Authoritative Geography",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Authoritative Geography": {
+      "main": [
+        [
+          {
+            "node": "Geography Valid?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lookup Saved Address": {
+      "main": [
+        [
+          {
+            "node": "Resolve Saved Address",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Resolve Saved Address": {
+      "main": [
+        [
+          {
+            "node": "New Address?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Persist Raw Submission": {
+      "main": [
+        [
+          {
+            "node": "Address Stored?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Consume Address Token": {
+      "main": [
+        [
+          {
+            "node": "Send LINE Confirmation?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Push Address Confirmation": {
+      "main": [
+        [
+          {
+            "node": "Check LINE Confirmation",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check LINE Confirmation": {
+      "main": [
+        [
+          {
+            "node": "Save Notification Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save Notification Status": {
+      "main": [
+        [
+          {
+            "node": "Return Notification Result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Return Notification Result": {
+      "main": [
+        [
+          {
+            "node": "Respond LIFF Submit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Address API Result": {
+      "main": [
+        [
+          {
+            "node": "Respond LIFF Submit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Identity Error": {
+      "main": [
+        [
+          {
+            "node": "Respond LIFF Submit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Setup Required": {
+      "main": [
+        [
+          {
+            "node": "Respond LIFF Submit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Return Existing Address": {
+      "main": [
+        [
+          {
+            "node": "Respond LIFF Submit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Address Storage Error": {
+      "main": [
+        [
+          {
+            "node": "Respond LIFF Submit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LINE Login Configured?": {
+      "main": [
+        [
+          {
+            "node": "Verify LINE ID Token",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Setup Required",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LINE Identity Valid?": {
+      "main": [
+        [
+          {
+            "node": "Lookup Address Token",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Identity Error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Accepted?": {
+      "main": [
+        [
+          {
+            "node": "Load Authoritative Geography",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Address API Result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Geography Valid?": {
+      "main": [
+        [
+          {
+            "node": "Lookup Saved Address",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Address API Result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "New Address?": {
+      "main": [
+        [
+          {
+            "node": "Persist Raw Submission",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Consume Address Token",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Address Stored?": {
+      "main": [
+        [
+          {
+            "node": "Consume Address Token",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Address Storage Error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send LINE Confirmation?": {
+      "main": [
+        [
+          {
+            "node": "Push Address Confirmation",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Return Existing Address",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "nodes": [
+    {
+      "id": "1122a85c-0e88-4d7e-97c4-2f4661976584",
+      "name": "LIFF Address Submit",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.2,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "hello2-liff-address-submit",
+        "responseMode": "responseNode",
+        "options": {
+          "allowedOrigins": "*"
+        }
+      },
+      "webhookId": "cec9cfd5-f32e-4482-9077-253d470c3402"
+    },
+    {
+      "id": "9faf2f69-60d5-461b-aa6a-85eab0e4cba3",
+      "name": "Prepare LIFF Submission",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        272,
+        400
+      ],
+      "parameters": {
+        "jsCode": "const b=$input.first().json.body||{};const names=['fullName','addressLine','province','district','subdistrict','postalCode','phone','provinceCode','districtCode','subdistrictCode','dataVersion'];const f={};for(const k of names)f[k]=typeof b[k]==='string'?b[k].trim():'';const token=String(b.token||'');const channelId='';const formBaseUrl='';return [{json:{...f,requestToken:token,idToken:String(b.idToken||''),channelId,formBaseUrl,configured:!!channelId&&/^https:\\/\\//.test(formBaseUrl),submissionKey:token,lineUserId:'',rawPayload:JSON.stringify({...f,token}),validationStatus:'accepted',validationErrors:'',notificationStatus:'pending',submittedAt:new Date().toISOString(),isTest:['manual','test'].includes($execution.mode)}}];"
+      }
+    },
+    {
+      "id": "d3828bcc-aa85-4cdc-8de2-7dd2ded6bd72",
+      "name": "LINE Login Configured?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        496,
+        400
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.configured }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "id": "31ad5933-a908-4fad-ad08-5c1ae36a093d",
+      "name": "Verify LINE ID Token",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        720,
+        304
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.line.me/oauth2/v2.1/verify",
+        "sendBody": true,
+        "contentType": "form-urlencoded",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "id_token",
+              "value": "={{ $json.idToken }}"
+            },
+            {
+              "name": "client_id",
+              "value": "={{ $json.channelId }}"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 15000,
+          "response": {
+            "response": {
+              "neverError": true,
+              "fullResponse": true,
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "id": "26b7d6bf-ca5a-4ab1-aa21-a81cef76df59",
+      "name": "Check LINE Identity",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        944,
+        304
+      ],
+      "parameters": {
+        "jsCode": "const c=$('Prepare LIFF Submission').item.json;const r=$input.first().json;const b=r.body||{};const valid=r.statusCode===200&&/^U[0-9a-f]{32}$/.test(String(b.sub||''))&&String(b.aud)===c.channelId;const {idToken,...safe}=c;return [{json:{...safe,lineUserId:valid?b.sub:'',identityValid:valid},pairedItem:{item:0}}];"
+      }
+    },
+    {
+      "id": "34fe8086-a3df-48de-b364-6eb5e2fb5ff3",
+      "name": "LINE Identity Valid?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        1168,
+        304
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.identityValid }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "id": "1c3a1bde-3370-4f8a-a275-0f688268515c",
+      "name": "Persist Raw Submission",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        1392,
+        208
+      ],
+      "parameters": {
+        "resource": "row",
+        "operation": "upsert",
+        "dataTableId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "87IO102sSzx6lF40"
+        },
+        "matchType": "allConditions",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "submissionKey",
+              "condition": "eq",
+              "keyValue": "={{ $json.submissionKey }}"
+            }
+          ]
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "submissionKey": "={{ $json.submissionKey }}",
+            "requestToken": "={{ $json.requestToken }}",
+            "lineUserId": "={{ $json.lineUserId }}",
+            "fullName": "={{ $json.fullName }}",
+            "addressLine": "={{ $json.addressLine }}",
+            "province": "={{ $json.province }}",
+            "district": "={{ $json.district }}",
+            "subdistrict": "={{ $json.subdistrict }}",
+            "postalCode": "={{ $json.postalCode }}",
+            "phone": "={{ $json.phone }}",
+            "provinceCode": "={{ $json.provinceCode }}",
+            "districtCode": "={{ $json.districtCode }}",
+            "subdistrictCode": "={{ $json.subdistrictCode }}",
+            "dataVersion": "={{ $json.dataVersion }}",
+            "rawPayload": "={{ $json.rawPayload }}",
+            "validationStatus": "={{ $json.validationStatus }}",
+            "validationErrors": "={{ $json.validationErrors }}",
+            "notificationStatus": "={{ $json.notificationStatus }}",
+            "submittedAt": "={{ $json.submittedAt }}",
+            "isTest": "={{ $json.isTest }}"
+          }
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "id": "6e517874-9866-4911-9306-de830984e217",
+      "name": "Lookup Address Token",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        1616,
+        208
+      ],
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "ejJFascKv3R09l4m"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "token",
+              "keyValue": "={{ $('Check LINE Identity').item.json.requestToken }}"
+            }
+          ]
+        },
+        "limit": 1
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "id": "8b11f422-6494-4903-ab35-5c1216a68cc1",
+      "name": "Validate Address",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1840,
+        208
+      ],
+      "parameters": {
+        "jsCode": "const f=$('Check LINE Identity').item.json;const r=$input.first().json;const errors=[];const replay=r.status==='submitted';if(r.lineUserId!==f.lineUserId||!r.token||!r.lineUserId||(!replay&&r.status!=='pending')||(!replay&&(!Number.isFinite(Date.parse(r.expiresAt))||Date.parse(r.expiresAt)<=Date.now())))errors.push('ลิงก์ไม่ถูกต้อง หมดอายุ หรือใช้แล้ว กรุณาขอฟอร์มใหม่ใน LINE');if(!/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(f.requestToken))errors.push('รูปแบบลิงก์ไม่ถูกต้อง');if(!f.fullName||f.fullName.length>200)errors.push('กรุณากรอกชื่อ ไม่เกิน 200 ตัวอักษร');if(!f.addressLine||f.addressLine.length>500)errors.push('กรุณากรอกที่อยู่ ไม่เกิน 500 ตัวอักษร');if(!/^0[689]\\d{8}$/.test(f.phone))errors.push('กรุณากรอกมือถือ 10 หลัก ขึ้นต้น 06, 08 หรือ 09');if(!/^\\d{2}$/.test(f.provinceCode)||!/^\\d{4}$/.test(f.districtCode)||!/^\\d{6}$/.test(f.subdistrictCode)||!/^\\d{5}$/.test(f.postalCode))errors.push('กรุณาเลือกข้อมูลพื้นที่ให้ครบ');return [{json:{...f,replay,valid:!errors.length,validationErrors:errors.join('\\n')},pairedItem:{item:0}}];"
+      }
+    },
+    {
+      "id": "ffeb184b-bfd2-408d-b118-274c04af1ba9",
+      "name": "Accepted?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        2288,
+        208
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $('Validate Address').item.json.valid }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "df4436b0-d8b8-4928-a231-4071c7c7b17a",
+      "name": "Consume Address Token",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        2512,
+        128
+      ],
+      "parameters": {
+        "operation": "update",
+        "dataTableId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "ejJFascKv3R09l4m"
+        },
+        "matchType": "allConditions",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "token",
+              "keyValue": "={{ $('Validate Address').item.json.requestToken }}"
+            }
+          ]
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "status": "submitted"
+          }
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "877c1b46-edff-4eb0-a1c9-f958a4275e7d",
+      "name": "Address API Result",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2736,
+        208
+      ],
+      "parameters": {
+        "jsCode": "return [{json:{httpStatus:422,status:'rejected',message:$input.first().json.validationErrors||'กรุณาตรวจสอบข้อมูลที่อยู่'},pairedItem:{item:0}}];"
+      }
+    },
+    {
+      "id": "1ddbeac3-d449-4a73-bcb5-435185836c7a",
+      "name": "Respond LIFF Submit",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        2960,
+        416
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ {status:$json.status,message:$json.message,notificationStatus:$json.notificationStatus} }}",
+        "options": {
+          "responseCode": "={{ $json.httpStatus }}",
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Cache-Control",
+                "value": "no-store"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "c7c01dee-20dd-4f13-88e5-13a8a186b6ab",
+      "name": "Identity Error",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2736,
+        416
+      ],
+      "parameters": {
+        "jsCode": "return [{json:{httpStatus:401,status:'rejected',message:'ยืนยันบัญชี LINE ไม่สำเร็จ กรุณาเปิดฟอร์มใหม่จากแชท LINE'}}];"
+      }
+    },
+    {
+      "id": "82933cfc-a452-4696-9408-e250c5d140e1",
+      "name": "Setup Required",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2736,
+        608
+      ],
+      "parameters": {
+        "jsCode": "return [{json:{httpStatus:503,status:'unconfigured',message:'ฟอร์มยังไม่เปิดใช้งาน กรุณารอแอดมินตั้งค่า LINE ให้เรียบร้อยค่ะ'}}];"
+      }
+    },
+    {
+      "id": "b406a5e8-f212-460c-bdc4-029740a1e6cb",
+      "name": "Load Authoritative Geography",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        1900,
+        0
+      ],
+      "parameters": {
+        "url": "={{ $('Validate Address').item.json.formBaseUrl + '/api/geography/subdistrict/' + $('Validate Address').item.json.subdistrictCode }}",
+        "options": {
+          "timeout": 15000,
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "id": "cf644076-7334-4f58-9131-239b2d7898e4",
+      "name": "Check Authoritative Geography",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2120,
+        0
+      ],
+      "parameters": {
+        "jsCode": "const f=$('Validate Address').item.json;const r=$input.first().json;const b=r.body||{};const match=r.statusCode===200&&b.dataVersion===f.dataVersion&&Array.isArray(b.records)&&b.records.find(g=>g.provinceCode===f.provinceCode&&g.districtCode===f.districtCode&&g.subdistrictCode===f.subdistrictCode&&g.postalCode===f.postalCode&&g.province===f.province&&g.district===f.district&&g.subdistrict===f.subdistrict);return [{json:{...f,valid:!!match,validationErrors:match?'':'จังหวัด อำเภอ ตำบล หรือรหัสไปรษณีย์ไม่ตรงกับฐานข้อมูล'},pairedItem:{item:0}}];"
+      }
+    },
+    {
+      "id": "a2b8776d-818f-4f96-a76f-a5c4581a4ea1",
+      "name": "Geography Valid?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        2340,
+        0
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.valid }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "6e794585-ed18-4ae0-a0c8-fbd6296d65cd",
+      "name": "Lookup Saved Address",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        2560,
+        0
+      ],
+      "parameters": {
+        "resource": "row",
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "87IO102sSzx6lF40"
+        },
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "submissionKey",
+              "condition": "eq",
+              "keyValue": "={{ $json.submissionKey }}"
+            }
+          ]
+        },
+        "returnAll": false,
+        "limit": 1
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "id": "e8a02783-00f2-4b0d-a1b2-eabaa1fffea3",
+      "name": "Resolve Saved Address",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2780,
+        0
+      ],
+      "parameters": {
+        "jsCode": "const f=$('Check Authoritative Geography').item.json;const r=$input.first().json;const saved=r.submissionKey===f.submissionKey&&r.validationStatus==='accepted'&&r.lineUserId===f.lineUserId;if(r.error)throw Error('Address lookup failed');if(f.replay&&!saved)throw Error('Submitted token missing saved address');return [{json:saved?{...f,...r,isTest:f.isTest,alreadySaved:true}:{...f,alreadySaved:false},pairedItem:{item:0}}];"
+      }
+    },
+    {
+      "id": "a159bea4-0375-4afc-8f74-c17583bbe21b",
+      "name": "New Address?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        3000,
+        0
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ !$json.alreadySaved }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "8eed6298-e2f1-49b4-9c9b-d71ff044de1c",
+      "name": "Address Stored?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        3440,
+        0
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.validationStatus === 'accepted' && !$json.error }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "dc7049db-812c-4bf6-8a63-8fd1978fa676",
+      "name": "Send LINE Confirmation?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        3880,
+        0
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $('Resolve Saved Address').item.json.notificationStatus !== 'sent' && !$('Resolve Saved Address').item.json.isTest }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "c9a71a2d-cf83-4f8e-ab4f-b6547b348277",
+      "name": "Push Address Confirmation",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        4100,
+        0
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.line.me/v2/bot/message/push",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBearerAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-Line-Retry-Key",
+              "value": "={{ $('Resolve Saved Address').item.json.requestToken }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ {to:$('Resolve Saved Address').item.json.lineUserId,messages:[{type:'text',text:'ได้รับข้อมูลที่อยู่จัดส่งเรียบร้อยแล้วค่ะ'}]} }}",
+        "options": {
+          "timeout": 15000,
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "onError": "continueRegularOutput",
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "iUDrEryFzrzEEsJP",
+          "name": "Bearer Auth account"
+        }
+      }
+    },
+    {
+      "id": "27e0706c-4b24-4dcc-b4a7-c0e41d372c30",
+      "name": "Check LINE Confirmation",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4320,
+        0
+      ],
+      "parameters": {
+        "jsCode": "const r=$input.first().json;const accepted=r.statusCode===200||(r.statusCode===409&&!!(r.headers||{})['x-line-accepted-request-id']);return [{json:{submissionKey:$('Resolve Saved Address').item.json.submissionKey,notificationStatus:accepted?'sent':'pending'},pairedItem:{item:0}}];"
+      }
+    },
+    {
+      "id": "7346cbe5-3d30-403a-806d-34365a805d42",
+      "name": "Save Notification Status",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        4540,
+        0
+      ],
+      "parameters": {
+        "resource": "row",
+        "operation": "update",
+        "dataTableId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "87IO102sSzx6lF40"
+        },
+        "matchType": "allConditions",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "submissionKey",
+              "condition": "eq",
+              "keyValue": "={{ $json.submissionKey }}"
+            }
+          ]
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "notificationStatus": "={{ $json.notificationStatus }}"
+          }
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "id": "9d12909e-7630-477f-951f-ae0d4463545a",
+      "name": "Return Notification Result",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4760,
+        0
+      ],
+      "parameters": {
+        "jsCode": "const n=$('Check LINE Confirmation').item.json;return [{json:{httpStatus:200,status:'accepted',notificationStatus:$input.first().json.error?'pending':n.notificationStatus,message:'ได้รับข้อมูลที่อยู่จัดส่งเรียบร้อยแล้วค่ะ'},pairedItem:{item:0}}];"
+      }
+    },
+    {
+      "id": "9edf9486-ac3a-40b6-a62f-cf3c03b42a77",
+      "name": "Return Existing Address",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4100,
+        300
+      ],
+      "parameters": {
+        "jsCode": "const f=$('Resolve Saved Address').item.json;return [{json:{httpStatus:200,status:'accepted',notificationStatus:f.notificationStatus==='sent'?'sent':'pending',message:'ได้รับข้อมูลที่อยู่จัดส่งเรียบร้อยแล้วค่ะ'},pairedItem:{item:0}}];"
+      }
+    },
+    {
+      "id": "316ca72c-80aa-4c6c-a482-0d460898da57",
+      "name": "Address Storage Error",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3660,
+        500
+      ],
+      "parameters": {
+        "jsCode": "return [{json:{httpStatus:503,status:'error',message:'ยังบันทึกที่อยู่ไม่สำเร็จ กรุณาลองส่งอีกครั้งด้วยลิงก์เดิมค่ะ'}}];"
+      }
+    }
+  ],
+  "nodeGroups": [
+    {
+      "id": "6c866c80-7b9d-46fb-82fe-970fc8ea6d68",
+      "name": "รับที่อยู่และยืนยันผ่าน LINE",
+      "nodeNames": [
+        "Prepare LIFF Submission",
+        "LINE Login Configured?",
+        "Verify LINE ID Token",
+        "Check LINE Identity",
+        "LINE Identity Valid?",
+        "Persist Raw Submission",
+        "Lookup Address Token",
+        "Validate Address",
+        "Accepted?",
+        "Consume Address Token",
+        "Address API Result",
+        "Respond LIFF Submit",
+        "Identity Error",
+        "Setup Required",
+        "Load Authoritative Geography",
+        "Check Authoritative Geography",
+        "Geography Valid?",
+        "Lookup Saved Address",
+        "Resolve Saved Address",
+        "New Address?",
+        "Address Stored?",
+        "Send LINE Confirmation?",
+        "Push Address Confirmation",
+        "Check LINE Confirmation",
+        "Save Notification Status",
+        "Return Notification Result",
+        "Return Existing Address",
+        "Address Storage Error"
+      ],
+      "description": "Verify identity, check authoritative geography, store by token and push one confirmation using a stable retry key."
+    }
+  ],
+  "activeVersion": null,
+  "meta": {
+    "aiBuilderAssisted": true,
+    "builderVariant": "mcp"
+  }
+}

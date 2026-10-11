@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "blook-address-form",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-10-11",
+  "assets": { "binding": "ASSETS", "not_found_handling": "single-page-application", "run_worker_first": ["/api/*"] },
+  "vars": { "LIFF_ID": "2011970670-ksiQuwGm", "LINE_LOGIN_CHANNEL_ID": "2011970670", "SUBMISSION_ENABLED": "true", "N8N_WEBHOOK_URL": "https://wisit.app.n8n.cloud/webhook/hello2-liff-address-submit" }
+}

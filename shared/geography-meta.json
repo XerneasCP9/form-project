@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/thailand-geography-data/thailand-geography-json",
+  "commit": "b8b3fb91c7df1129ff5b43cb46f7fcffadd2156b",
+  "sha256": "92166aedd41cc64b6404043c684df8180c251f58e8f509285cc0363a0598a684",
+  "provinceCount": 77,
+  "districtCount": 928,
+  "recordCount": 7436
+}
